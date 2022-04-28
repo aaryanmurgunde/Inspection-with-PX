@@ -1,0 +1,4 @@
+PROBLEM_FILE = /home/aaryan/catkin_ws/src/Inspection-with-PX/Exploration/utils/lkh_tsp_solver/resource/single.tsp
+GAIN23 = NO
+OUTPUT_TOUR_FILE =/home/aaryan/catkin_ws/src/Inspection-with-PX/Exploration/utils/lkh_tsp_solver/resource/single.txt
+RUNS = 1
