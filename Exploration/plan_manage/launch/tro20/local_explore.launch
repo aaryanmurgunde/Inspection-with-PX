@@ -5,7 +5,7 @@
   <arg name="map_size_z" value=" 5.0"/>
 
   <!-- topic of your odometry such as VIO or LIO -->
-  <arg name="odom_topic" value="/state_ukf/odom" />
+  <arg name="odom_topic" value="/mavros/local_position/odom" />
 
   <!-- main algorithm params -->
   <include file="$(find plan_manage)/launch/tro/local_explore_alg.xml">
@@ -18,8 +18,8 @@
     <!-- camera pose: transform of camera frame in the world frame -->
     <!-- depth topic: depth image, 640x480 by default -->
     <!-- don't set cloud_topic if you already set these ones! -->
-    <arg name="camera_pose_topic" value="/pcl_render_node/camera_pose"/>
-    <arg name="depth_topic" value="/pcl_render_node/depth"/>
+    <arg name="camera_pose_topic" value="/mavros/local_position/odom"/>
+    <arg name="depth_topic" value="/camera/depth/image_raw"/>
 
     <!-- topic of point cloud measurement, such as from LIDAR  -->
     <!-- don't set camera pose and depth, if you already set this one! -->

@@ -12,7 +12,7 @@
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="iris_depth_camera"/>
-    <arg name="world_name" default="empty"/>
+    <arg name="world_name" default="map"/>
     <arg name="world" default="$(find exploration_manager)/model/dome/dome.world"/>
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 

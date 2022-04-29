@@ -5,7 +5,7 @@
   <arg name="map_size_z" value=" 5.0"/>
 
   <!-- check 1 -->
-  <arg name="odom_topic" value="/vins_estimator/imu_propagate" />
+  <arg name="odom_topic" value="/mavros/local_position/odom" />
 
   <!-- main algorithm params -->
   <include file="$(find plan_manage)/launch/topo_algorithm.xml">
@@ -16,8 +16,8 @@
     <arg name="odometry_topic" value="$(arg odom_topic)"/>
 
     <!-- check 2: camera pose and depth topic -->
-    <arg name="sensor_pose_topic" value="/vins_estimator/camera_pose"/>
-    <arg name="depth_topic" value="/camera/depth/image_rect_raw"/>
+    <arg name="sensor_pose_topic" value="/mavros/local_position/pose"/>
+    <arg name="depth_topic" value="/camera/depth/image_raw"/>
 
     <arg name="cloud_topic" value="/pcl_render_node/cloud"/>
 

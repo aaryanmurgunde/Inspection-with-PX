@@ -51,7 +51,7 @@
     <param name="sdf_map/use_uniform_update" value="true"/>
 
     <param name="sdf_map/pose_type"     value="1"/>  
-    <param name="sdf_map/frame_id"      value="world"/>
+    <param name="sdf_map/frame_id"      value="map"/>
 
   <!-- planner manager -->
     <param name="manager/time_sample" value="0.5" type="double"/>

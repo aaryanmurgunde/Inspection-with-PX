@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   lkh_tsp_solver
   plan_manage
   cv_bridge
+  tf2_geometry_msgs
 )
 
 catkin_package(
@@ -66,4 +67,9 @@ target_link_libraries(write_tsp
 add_executable(load_obj test/load_obj.cpp)
 target_link_libraries(load_obj
   ${catkin_LIBRARIES} ${PCL_LIBRARIES}
+)
+
+add_executable(camera_pose src/camera_pose.cpp)
+target_link_libraries(camera_pose
+  ${catkin_LIBRARIES}  ${Boost_LIBRARIES}
 )
