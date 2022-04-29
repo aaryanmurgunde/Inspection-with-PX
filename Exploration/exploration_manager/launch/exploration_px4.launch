@@ -64,7 +64,6 @@
     
 
   </node>
-
   <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
     <remap from="~odom" to="$(arg odom_topic)"/>        
     <remap from="~goal" to="/move_base_simple/goal"/>
@@ -79,5 +78,13 @@
    
   <include file="$(find testbot_description)/launch/testbot.launch"/>
   <include file="$(find exploration_manager)/launch/mavros_posix_sitl.launch"/>
+  
+  <!-- <node pkg="exploration_manager" name="camera_pose_publisher" type="camera_pose_publisher.py" output="screen">
+        <param name="parent_frame" value="map" />
+        <param name="child_frame" value="camera_link" />
+        <param name="pose_topic" value="/camera/pose" />
+    </node> -->
+
+  <node pkg="exploration_manager" name="camera_pose_publisher" type="camera_pose" output="screen" />
 
 </launch>

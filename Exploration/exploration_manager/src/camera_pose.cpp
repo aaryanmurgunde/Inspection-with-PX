@@ -15,10 +15,11 @@ void cameraPoseCallback(const geometry_msgs::PoseStamped::ConstPtr& data){
     tf2::Quaternion q_orig, q_rot, q_new;
     //Quaternion conversion
     tf2::convert(camera_pose.pose.orientation , q_orig);
-    q_rot.setRPY(degreeToRad(90.0) , 0, degreeToRad(-90.0));
+    q_rot.setRPY(degreeToRad(-90.0) , 0, degreeToRad(270.0));
     q_new = q_rot*q_orig;
     q_new.normalize();
     tf2::convert(q_new, camera_pose.pose.orientation);
+    camera_pose.pose.position.x += 0.1;
     pub_pose.publish(camera_pose);
 }
 
