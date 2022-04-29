@@ -31,8 +31,8 @@
     <!-- depth topic: depth image, 640x480 by default -->
     <!-- cloud topic: point cloud measurement  -->
     <!-- subscribe ONLY TO ONE of the two topics -->
-    <arg name="depth_topic" value="/camera/depth/image_rect_raw"/>
-    <arg name="cloud_topic" value="/camera/depth/points"/>
+    <arg name="depth_topic" value="/camera/depth/image_raw"/>
+    <arg name="cloud_topic" value="/pcl_render_node/cloud"/>
 
     <!-- intrinsic params of the depth camera -->
     <arg name="cx" value="320.818268"/>

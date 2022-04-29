@@ -8,6 +8,12 @@
       </geometry>
     </visual>
   </link>
+  <link name="camera_link" />
+  <joint name="depth_camera_joint" type="fixed">
+      <origin xyz="0.1 0 0" rpy="-1.5 0 1.5" />
+      <parent link="base_link" />
+      <child link="camera_link" />
+    </joint>
 </robot>
 
 

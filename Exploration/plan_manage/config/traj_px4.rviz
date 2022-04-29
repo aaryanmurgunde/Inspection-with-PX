@@ -12,9 +12,9 @@ Panels:
         - /active_perception1/viewpoint1/Namespaces1
         - /active_perception1/depth1
         - /LocalMap1
+        - /LocalMap1/occupied_local1
         - /LocalMap1/occupied_local1/Autocompute Value Bounds1
         - /LocalMap1/occupied_all1/Autocompute Value Bounds1
-        - /Simulation1
         - /debug21/Autocompute Value Bounds1
         - /processed_msg1/Namespaces1
         - /PointCloud21
@@ -178,7 +178,7 @@ Visualization Manager:
           Color: 126; 126; 126
           Color Transformer: AxisColor
           Decay Time: 0
-          Enabled: false
+          Enabled: true
           Invert Rainbow: false
           Max Color: 0; 0; 0
           Min Color: 0; 0; 0
@@ -189,11 +189,11 @@ Visualization Manager:
           Size (Pixels): 3
           Size (m): 0.10000000149011612
           Style: Boxes
-          Topic: /sdf_map/occupancy_local
+          Topic: /camera/depth/points
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
-          Value: false
+          Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
@@ -206,7 +206,7 @@ Visualization Manager:
           Color: 116; 116; 116
           Color Transformer: AxisColor
           Decay Time: 0
-          Enabled: true
+          Enabled: false
           Invert Rainbow: false
           Max Color: 0; 0; 0
           Min Color: 0; 0; 0
@@ -221,7 +221,7 @@ Visualization Manager:
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
-          Value: true
+          Value: false
         - Alpha: 0.30000001192092896
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
@@ -630,14 +630,14 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.4000000953674316
-        Min Value: -0.5
+        Max Value: 8.766478538513184
+        Min Value: -6.508635997772217
         Value: true
       Axis: Z
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 100; 100; 100
-      Color Transformer: AxisColor
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -649,8 +649,8 @@ Visualization Manager:
       Selectable: true
       Size (Pixels): 3
       Size (m): 0.125
-      Style: Flat Squares
-      Topic: /map_generator/click_map
+      Style: Points
+      Topic: /camera/depth/points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -670,6 +670,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -710,18 +714,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -2.2271299362182617
-        Y: 0.18309152126312256
-        Z: -2.5082706997636706e-5
+        X: 2.7235171794891357
+        Y: -2.3851795196533203
+        Z: -2.4963497708085924e-5
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.2897970378398895
+      Pitch: 0.3947969973087311
       Target Frame: <Fixed Frame>
       Value: ThirdPersonFollower (rviz)
-      Yaw: 3.6945810317993164
+      Yaw: 6.2545881271362305
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 40.93450164794922
